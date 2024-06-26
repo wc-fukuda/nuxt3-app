@@ -9,5 +9,11 @@
 </template>
 
 <script setup>
-  const { data: users } = await useFetch('https://jsonplaceholder.typicode.com/users')
+  const { data: users, error } = await useFetch('https://jsonplaceholder.typicode.com/usersssssss')
+  // console.log(error)
+  if(error.value) {
+    throw createError({
+      statusCode: 404,
+      statusMessage: 'Not Found'})
+  }
 </script>
