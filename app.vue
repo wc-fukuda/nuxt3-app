@@ -6,3 +6,17 @@
   </div>
 </template>
 
+<script setup>
+useHead({
+  title: 'Nuxt3 Store',
+  link: [
+    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap' }
+  ]
+})
+</script>
+
+<style>
+html {
+  font-family: 'Permanent Marker', cursive;
+}
+</style>
