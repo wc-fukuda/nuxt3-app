@@ -5,5 +5,5 @@
 </template>
 
 <script setup>
-  const title = useState('title', ()=> 'Hello world!')
+  const title = useTitle()
 </script>
