@@ -1,11 +1,13 @@
 <template>
   <div>
-    {{ title }}
-    <button @click="titleState.changeTitle('Hello Nuxt3!')">chengeTitle</button>
+    <div>{{ counter }}</div>
+    <button @click="counterStore.countUp">+</button>
+    <button @click="counterStore.countDown">-</button>
+    <button @click="counterStore.Reset">reset</button>
   </div>
 </template>
 
 <script setup>
-  const titleState = useTitle()
-  const { title } = titleState
+  const counterStore = useCounterState();
+  const { counter } = counterStore;
 </script>
