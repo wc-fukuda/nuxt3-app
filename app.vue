@@ -1,5 +1,9 @@
 <template>
   <div>
-    <img src="~/assets/test.jpg" alt="SAMPLE">
+    {{ title }}
   </div>
 </template>
+
+<script setup>
+  const title = useState('title', ()=> 'Hello world!')
+</script>
