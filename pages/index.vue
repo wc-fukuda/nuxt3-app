@@ -1,7 +1,9 @@
 <template>
     <div>
-        <button v-on:click="onclick">クリック</button>
-        <p>{{ now }}</p>
+        <p><input v-model="message" type="text"></p>
+        <p><input v-model="message" type="text"></p>
+        <!-- $dataと書くと、dataオブジェクトのreturnされた値が取得できる -->
+        <pre>{{ $data }}</pre>
     </div>
 </template>
 
@@ -9,19 +11,8 @@
 export default {
     data() {
         return {
-          // 初期値を設定する
-          now: 'ここに現在時刻が表示されます'
+            message: 'Hello, Vue.js!'
         }
-    },
-    methods: {
-      onclick: function() {
-        // console.log('クリックされました')
-
-        // 現在時刻を取得してnowに代入する
-        this.now = new Date().toLocaleString()
-        // thisはnowを持っているオブジェクトを指す
-        console.log(this)
-      }
     }
 }
 </script>
