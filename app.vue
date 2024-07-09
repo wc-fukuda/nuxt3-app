@@ -1,16 +1,19 @@
 <template>
-  <h1>TODO</h1>
-  <form @submit.prevent="addTask">
-    <input v-model="newTask" name="addTask" autocomplete="off" type="text">
-    <button>Add</button>
-  </form>
-  <ul>
-    <li v-for="(task, index) in tasks" :key="task">
-      <span>{{ task }}</span>
-      <button @click="$event => deleteTask(index)">Delete</button>
-    </li>
-  </ul>
-  <button @click="clearTask">All Clear</button>
+  <NuxtPage />
+  <section id="nuxtLesson">
+    <h1>TODO</h1>
+    <form @submit.prevent="addTask">
+      <input v-model="newTask" name="addTask" autocomplete="off" type="text">
+      <button>Add</button>
+    </form>
+    <ul>
+      <li v-for="(task, index) in tasks" :key="task">
+        <span>{{ task }}</span>
+        <button @click="$event => deleteTask(index)">Delete</button>
+      </li>
+    </ul>
+    <button @click="clearTask">All Clear</button>
+  </section>
 </template>
 
 <script setup>
