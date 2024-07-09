@@ -1,6 +1,10 @@
 <template>
     <div>
-        <p v-if="toggle">hello</p>
+      <ol>
+        <!-- 単数形 in 複数形とすることで配列だと認識しやすくなる -->
+        <!-- key="color" は、v-for でループする要素に一意のキーを指定しておく必要がある -->
+        <li v-for="color in colors" :key="color">{{ color }}</li>
+      </ol>
     </div>
 </template>
 
@@ -8,8 +12,7 @@
 export default {
     data() {
         return {
-          // toggleの初期値をfalseに設定、trueにすると表示される
-          toggle: false
+          colors: ['red', 'blue', 'green', 'yellow', 'purple']
         }
     }
 }
